@@ -112,8 +112,10 @@ The user should be able to see the list of tasks, add new ones, delete existing 
       
       function getTasksAsArray(){
         let taskArray = [];
-        let selectedLi = document.querySelectorAll('#myTaskList li')
-        taskArray.push(selectedLi);
+        let selectedLi = document.querySelectorAll('#myTaskList li');
+        for (let i = 0; i < taskArray.length; i++) {
+          taskArray.push(selectedLi.innerText);
+        }
         console.log(taskArray);
     }
       /* EXERCISE 9:
